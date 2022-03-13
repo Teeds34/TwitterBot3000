@@ -20,18 +20,12 @@ api = tweepy.API(auth)
 # Timestamp Format
 f = "%d.%^b.%Y %H:%M:%S"
 
-#Set Tweet Count
-tc = 0
-
 def rt(api, screen_name):
     try:
-        global tc
-        tc = 0
         api.retweet(screen_name)
         t = datetime.now()
         timestamp = t.strftime(f)
         print(timestamp + " Retweeting: " + str(screen_name))
-        tc = tc + 1
     except:
         pass
     
@@ -55,12 +49,6 @@ while True:
         tweets = api.user_timeline(screen_name=username, count=1)
         for tweet in tweets:
                 rt(api, tweet.id)
-    if tc == 0:
-        t = datetime.now()
-        timestamp = t.strftime(f)
-        print(timestamp + " No tweets found during this scan.")
-    else:
-        pass
     t = datetime.now()
     timestamp = t.strftime(f)
     print(timestamp + " Pausing for " + str(config.m) + " minutes.")
