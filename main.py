@@ -63,7 +63,7 @@ while True:
         pass
     t = datetime.now()
     timestamp = t.strftime(f)
-    print(timestamp + " Pausing for " + str(m) + " minutes.")
+    print(timestamp + " Pausing for " + str(config.m) + " minutes.")
     time.sleep(config.m*60)
     print()
     print("New Scan")
