@@ -20,6 +20,7 @@ api = tweepy.API(auth)
 # Timestamp Format
 f = "%d.%^b.%Y %H:%M:%S"
 
+# Start Script
 def rt(api, screen_name):
     try:
         api.retweet(screen_name)
@@ -28,8 +29,6 @@ def rt(api, screen_name):
         print(timestamp + " Retweeting: " + str(screen_name))
     except:
         pass
-    
-
 print()
 print()
 print(" +--------------------+")
@@ -37,7 +36,6 @@ print(" |                    |")
 print(" |   TwitterBot3000   |")
 print(" |                    |")
 print(" +--------------------+")
-
 time.sleep(3)
 print()
 print()
