@@ -23,10 +23,6 @@ f = "%d.%^b.%Y %H:%M:%S"
 #Set Tweet Count
 tc = 0
 
-#Calculate Sleep time
-sleep = config.m*60
-
-
 def rt(api, screen_name):
     try:
         global tc
@@ -68,7 +64,7 @@ while True:
     t = datetime.now()
     timestamp = t.strftime(f)
     print(timestamp + " Pausing for " + str(m) + " minutes.")
-    time.sleep(sleep)
+    time.sleep(config.m*60)
     print()
     print("New Scan")
     t = datetime.now()
