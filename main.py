@@ -38,11 +38,11 @@ def rt(api, screen_name):
 
 print()
 print()
-print(" +---------------------+")
-print(" |                     |")
-print(" |   TwitterBot3000    |")
-print(" |                     |")
-print(" +---------------------+")
+print(" +--------------------+")
+print(" |                    |")
+print(" |   TwitterBot3000   |")
+print(" |                    |")
+print(" +--------------------+")
 
 time.sleep(3)
 print()
