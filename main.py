@@ -18,7 +18,7 @@ auth.set_access_token(config.atoken, config.asecret)
 api = tweepy.API(auth)
 
 # Timestamp Format
-f = "%Y-%^b-%d %H:%M:%S"
+f = "%Y-%m-%d %H:%M:%S.%f"
 
 # Start Script
 def rt(api, screen_name):
