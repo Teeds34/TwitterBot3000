@@ -40,7 +40,7 @@ time.sleep(3)
 print()
 print()
 t = datetime.now()
-timestamp = t.strftime(f)
+timestamp = t.strftime(f)[:-4]
 print(timestamp + " Scanning...")
 while True:
     for username in config.usernames:
@@ -48,7 +48,7 @@ while True:
         for tweet in tweets:
                 rt(api, tweet.id)
     t = datetime.now()
-    timestamp = t.strftime(f)
+    timestamp = t.strftime(f)[:-4]
     print(timestamp + " Pausing for " + str(config.m) + " minutes.")
     time.sleep(config.m*60)
     print()
