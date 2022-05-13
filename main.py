@@ -54,5 +54,5 @@ while True:
     print()
     print("New Scan")
     t = datetime.now()
-    timestamp = t.strftime(f)
+    timestamp = t.strftime(f)[:-4]
     print(timestamp + " Scanning...")
