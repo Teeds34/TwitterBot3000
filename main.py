@@ -25,7 +25,7 @@ def rt(api, screen_name):
     try:
         api.retweet(screen_name)
         t = datetime.now()
-        timestamp = t.strftime(f)
+        timestamp = t.strftime(f)[:-4]
         print(timestamp + " Retweeting: " + str(screen_name))
     except:
         pass
