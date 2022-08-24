@@ -1,5 +1,5 @@
 # TwitterBot3000 
-by Mike Tieden (@miketieden)
+by Teeds (@teedstc)
 
 A simple python script to retweet specified users at a regular interval.
 
