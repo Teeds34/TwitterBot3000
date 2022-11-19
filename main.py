@@ -2,7 +2,7 @@
 #
 # TwitterBot3000
 # by,
-# Mike Tieden (@miketieden)
+# Teeds (@teeds34)
 #
 import tweepy
 import config
@@ -42,17 +42,10 @@ print()
 t = datetime.now()
 timestamp = t.strftime(f)[:-4]
 print(timestamp + " Scanning...")
-while True:
-    for username in config.usernames:
-        tweets = api.user_timeline(screen_name=username, count=1)
-        for tweet in tweets:
-                rt(api, tweet.id)
-    t = datetime.now()
-    timestamp = t.strftime(f)[:-4]
-    print(timestamp + " Pausing for " + str(config.m) + " minutes.")
-    time.sleep(config.m*60)
-    print()
-    print("New Scan")
-    t = datetime.now()
-    timestamp = t.strftime(f)[:-4]
-    print(timestamp + " Scanning...")
+for username in config.usernames:
+    tweets = api.user_timeline(screen_name=username, count=1)
+    for tweet in tweets:
+            rt(api, tweet.id)
+t = datetime.now()
+timestamp = t.strftime(f)[:-4]
+print(timestamp + " Scanning complete.")
